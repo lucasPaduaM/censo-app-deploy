@@ -1,0 +1,386 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+}
+
+/*Defino los margin, padding y bordes por defecto en 0*/
+
+body {
+
+    font-family: 'Righteous', cursive;
+
+    width: 100%;
+
+}
+
+#cabeza {
+
+    background: linear-gradient(to bottom right, blue, pink);
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+}
+
+#imgLogo {
+    width: 180px;
+    height: 250px;
+    margin-left: 30px;
+    margin-top: -25px;
+    cursor: pointer;
+}
+
+#formRegistroBtn,
+#formLoginBtn,
+#logOutBtn {
+    cursor: pointer;
+    user-select: none;
+}
+
+#contenedorNav {
+
+    background-color: blue;
+
+}
+
+#barraNav {
+
+    align-items: center;
+    padding: 10px;
+    height: 45px;
+    display: flex;
+    margin-right: 10px;
+    color: azure;
+    font-size: 18px;
+    text-decoration: none;
+
+}
+
+#barraNav a {
+
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: azure;
+}
+
+#barraNav a:hover {
+
+    background-color: rgb(212, 129, 194);
+    transition: 0.5s;
+
+    /*teansicion de color en enlaces se modifican desde el transition*/
+}
+
+#menusCabeza {
+
+    align-items: center;
+    padding: 10px;
+    height: 45px;
+    display: flex;
+    margin-right: 10px;
+    color: azure;
+    font-size: 18px;
+    text-decoration: none;
+
+}
+
+#menusCabeza a {
+
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: azure;
+    transition: 0.4s;
+
+}
+
+#menusCabeza a:hover {
+
+    background-color: rgb(212, 129, 194);
+    transition: 0.4s;
+}
+
+
+#navInvitado {
+
+    align-items: center;
+    padding: 10px;
+    height: 45px;
+    display: flex;
+    margin-right: 10px;
+    color: azure;
+    font-size: 18px;
+    text-decoration: none;
+
+}
+
+#navInvitado a {
+
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: azure;
+    transition: 0.4s;
+
+}
+
+#navAdmin a:hover {
+
+    background-color: rgb(212, 129, 194);
+    transition: 0.4s;
+}
+
+.formsEstilos {
+
+    width: 250px;
+    background: linear-gradient(to bottom right, rgb(158, 158, 202), pink);
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 4px;
+}
+
+
+.formsEstilos h1 {
+
+    font-size: 25px;
+    text-align: center;
+
+}
+
+.txtEstilos {
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid black;
+    font-family: 'Righteous', cursive;
+    margin-bottom: 10px;
+}
+
+.formsEstilos {
+
+    width: 250px;
+    background: linear-gradient(to bottom right, rgb(158, 158, 202), pink);
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 4px;
+    margin-bottom: 50px;
+}
+
+
+.formsEstilos h1 {
+
+    font-size: 25px;
+    text-align: center;
+
+}
+
+.txtEstilos {
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid black;
+    font-family: 'Righteous', cursive;
+}
+
+.btnsForms {
+
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid black;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.4s;
+}
+
+.btnsForms:hover {
+
+    background-color: rgb(116, 116, 167);
+    color: aliceblue;
+    transition: 0.4s;
+
+
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////*/
+
+#form-login {
+
+    width: 250px;
+    background: linear-gradient(to bottom right, rgb(158, 158, 202), pink);
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 4px;
+}
+
+
+#form-login h1 {
+
+    font-size: 25px;
+    text-align: center;
+
+}
+
+#txtLogin {
+
+
+    width: 80%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid black;
+    font-family: 'Righteous', cursive;
+    margin-left: 5%;
+}
+
+#ingresarLogin {
+
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid black;
+    margin-left: 35%;
+    cursor: pointer;
+}
+
+#ingresarLogin:hover {
+
+    background-color: rgb(116, 116, 167);
+    color: aliceblue;
+    transition: 0.5s;
+
+
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////////////////////*/
+
+#form-registro {
+
+    width: 250px;
+    background: linear-gradient(to bottom right, rgb(158, 158, 202), pink);
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 4px;
+}
+
+
+#form-registro h1 {
+
+    font-size: 25px;
+    text-align: center;
+
+}
+
+#txtRegistro {
+    width: 80%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid black;
+    font-family: 'Righteous', cursive;
+    margin-left: 5%;
+}
+
+#ingresarRegistro {
+
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid black;
+    margin-left: 35%;
+    cursor: pointer;
+}
+
+#ingresarRegistro:hover {
+
+    background-color: rgb(116, 116, 167);
+    color: aliceblue;
+    transition: 0.5s;
+
+
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////*/
+footer {
+
+    height: 60 px;
+    background: linear-gradient(to bottom right, rgb(158, 158, 202), pink);
+    text-align: center;
+    padding: 10px;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////*/
+
+#contenedor-banner {
+    margin: auto;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    display: flex;
+    height: 100vh;
+
+}
+
+#imgBanner {
+
+    border-radius: 4px;
+    max-width: 100%;
+    height: auto;
+
+}
+
+#encabezadoTabla {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: rgb(0, 0, 0);
+    padding: 2px;
+    font-size: 24px;
+    text-decoration: underline;
+
+}
+
+#tabla-estadisticasIndex {
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    width: 50%;
+    /* Aca va el ancho de la tabla */
+    max-width: 100%;
+    /* La tabla no es mas grande que el ancho de la imagen */
+    box-sizing: border-box;
+    /* Agrega padding en el ancho total */
+
+}
+
+#tabla-estadisticasIndex,
+th,
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.formsEstilosValidar{
+
+    width: 500px;
+    background: linear-gradient(to bottom right, rgb(158, 158, 202), pink);
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 4px;
+
+}

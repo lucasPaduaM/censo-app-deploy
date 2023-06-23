@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Censo WebApp</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="../javascript/clases.js"></script>
+    <script src="../javascript/codigo.js"></script>
+    <!--LINK FUENTES DE FONT GOOGLE-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Righteous&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-color:rgb(129, 114, 114)">
+
+    <div id="cabeza">
+        <a href="index.html"><img id="imgLogo" src="img/CENSO-LOGO.png" alt="LOGO"></a>
+        <div id="menusCabeza">
+            <!--NAV ADMIN-->
+            <div id="navAdmin">
+                <a id="logOutBtn" style="display: none;">LOG OUT</a>
+            </div>
+            <!--NAV INVITADO-->
+            <div id="navInvitado">
+                <a id="formLoginBtn">LOG IN</a>
+                <a id="formRegistroBtn">REGISTRO</a>
+                <a id="logOutBtn" style="display: none;">LOG OUT</a>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <div id="contenedorNav">
+        <nav id="barraNav">
+            <a href="index.html">INICIO</a>
+        </nav>
+    </div>
+    </div>
+
+    <div class="formsEstilos" id="formRegistro" hidden>
+        <center>
+            <h1>Registro</h1>
+            <br>
+            <input class="txtEstilos" type="text" id="nombreRegistro" placeholder="Nombre..."><br>
+            <input class="txtEstilos" type="text" id="nombreDeUsuarioRegistro" placeholder="Usuario..."><br>
+            <input class="txtEstilos" type="password" id="contraseniaRegistro" placeholder="Contraseña..."><br>
+            <input class="btnsForms" type="button" id="registrarCensista" value="Registrar">
+            <br>
+            <p class="estilosMensajes" id="mensajesRegistro"></p>
+        </center>
+    </div>
+
+    <div class="formsEstilos" id="formLogin" hidden>
+        <center>
+            <h1>Login</h1>
+            <br>
+            <input class="txtEstilos" type="text" id="nombreDeUsuarioLogin" placeholder="Usuario..."><br>
+            <input class="txtEstilos" type="password" id="contraseniaLogin" placeholder="Contraseña..."><br>
+            <input class="btnsForms" type="button" id="loguearCensista" value="Login">
+            <br>
+            <p class="estilosMensajes" id="mensajesLogin"></p>
+        </center>
+    </div>
+
+    <div class="formsEstilos" id="formInvitado">
+        <center>
+            <h1>Formulario invitado</h1>
+            <br>
+            <input class="txtEstilos" type="text" id="ciInvitado" placeholder="Documento..."><br>
+            <input class="btnsForms" type="button" id="buscarCensoInvitado" value="Buscar">
+            <br>
+            <p class="estilosMensajes" id="mensajesFormInvitado"></p>
+            <div id="btnsFormInvitado" hidden>
+                <label class="estilosMensajes">Desea </label><input id="btnModCensoInvitado" class="btnsForms"
+                    type="button" value="Modificar censo">
+                <br>
+                <label class="estilosMensajes">O en cambio </label><input id="eliminarCensoInvitado" class="btnsForms"
+                    type="button" value="Eliminar censo">
+            </div>
+            <input class="btnsForms" id="btnConfirmarEliminarCenso" type="button" value="Confirmar" hidden>
+        </center>
+    </div>
+
+    <div class="formsEstilos" id="censistaMenu" hidden>
+        <center>
+            <h1 id="nombreCensistaH1">Censista: </h1>
+            <br>
+            <input class="btnsForms" id="btnMostrarListarCensos" type="button"
+                value="Ver censos pendientes por validar">
+            <br>
+            <input class="btnsForms" id="btnMostrarAgregarCenso" type="button" value="Ingresar censo">
+            <br>
+            <input class="btnsForms" id="btnMostrarCambiarCensista" type="button"
+                value="Cambiar censista a cargo de censo">
+            <br>
+            <input class="btnsForms" id="btnMostrarBuscarVerificarCenso" type="button" value="Buscar y verificar censo">
+        </center>
+    </div>
+
+    <div class="formsEstilos" id="formAgregarCenso" hidden>
+        <center>
+            <h1>Agregar Censo</h1>
+            <br>
+            <input class="txtEstilos" type="text" id="nombrePersona" placeholder="Nombre..."><br>
+            <input class="txtEstilos" type="text" id="apellidoPersona" placeholder="Apellido..."><br>
+            <input class="txtEstilos" type="number" id="edadPersona" placeholder="Edad..."><br>
+            <input class="txtEstilos" type="text" id="ciPersona" placeholder="Cedula..."><br>
+
+            <label>Departamento</label><br><br>
+
+            <select class="txtEstilos" id="selectDepartamentoAgregar">
+
+                <option value="Artigas">Artigas</option>
+                <option value="Canelones">Canelones</option>
+                <option value="Cerro Largo">Cerro Largo</option>
+                <option value="Colonia">Colonia</option>
+                <option value="Durazno">Durazno</option>
+                <option value="Flores">Flores</option>
+                <option value="Florida">Florida</option>
+                <option value="Lavalleja">Lavalleja</option>
+                <option value="Maldonado">Maldonado</option>
+                <option value="Montevideo">Montevideo</option>
+                <option value="Paysandu">Paysandú</option>
+                <option value="Rio Negro">Río Negro</option>
+                <option value="Rivera">Rivera</option>
+                <option value="Rocha">Rocha</option>
+                <option value="Salto">Salto</option>
+                <option value="San Jose">San José</option>
+                <option value="Soriano">Soriano</option>
+                <option value="Tacuarembo">Tacuarembó</option>
+                <option value="Treinta y Tres">Treinta y Tres</option>
+
+            </select><br>
+
+            <label>Ocupacion</label><br><br>
+            <select class="txtEstilos" id="selectOcupacionAgregar">
+
+                <option value="Dependiente">Dependiente</option>
+                <option value="Independiente">Independiente</option>
+                <option value="Estudiante">Estudiante</option>
+                <option value="noTrabaja">No trabaja</option>
+
+            </select><br>
+
+            <input class="btnsForms" type="button" id="agregarCensado" value="Agregar">
+            <br>
+            <p class="estilosMensajes" id="mensajesAgregar"></p>
+        </center>
+    </div>
+
+    <br>
+    <div class="formsEstilos" id="formModificarCenso" hidden>
+        <center>
+            <h1>Modificar Censo</h1>
+            <br>
+            <input class="txtEstilos" type="text" id="nombrePersonaMod" placeholder="Nombre..."><br>
+            <input class="txtEstilos" type="text" id="apellidoPersonaMod" placeholder="Apellido..."><br>
+            <input class="txtEstilos" type="number" id="edadPersonaMod" placeholder="Edad..."><br>
+            <input class="txtEstilos" type="text" id="ciPersonaMod" placeholder="Cedula..."><br>
+
+            <label>Departamento</label><br><br>
+
+            <select class="txtEstilos" id="selectDepartamentoMod">
+
+                <option value="Artigas">Artigas</option>
+                <option value="Canelones">Canelones</option>
+                <option value="Cerro Largo">Cerro Largo</option>
+                <option value="Colonia">Colonia</option>
+                <option value="Durazno">Durazno</option>
+                <option value="Flores">Flores</option>
+                <option value="Florida">Florida</option>
+                <option value="Lavalleja">Lavalleja</option>
+                <option value="Maldonado">Maldonado</option>
+                <option value="Montevideo">Montevideo</option>
+                <option value="Paysandu">Paysandú</option>
+                <option value="Rio Negro">Río Negro</option>
+                <option value="Rivera">Rivera</option>
+                <option value="Rocha">Rocha</option>
+                <option value="Salto">Salto</option>
+                <option value="San Jose">San José</option>
+                <option value="Soriano">Soriano</option>
+                <option value="Tacuarembo">Tacuarembó</option>
+                <option value="Treinta y Tres">Treinta y Tres</option>
+
+            </select><br>
+
+            <label>Ocupacion</label><br><br>
+            <select class="txtEstilos" id="selectOcupacionMod">
+
+                <option value="Dependiente">Dependiente</option>
+                <option value="Independiente">Independiente</option>
+                <option value="Estudiante">Estudiante</option>
+                <option value="noTrabaja">No trabaja</option>
+
+            </select><br>
+
+            <input class="btnsForms" type="button" id="ModificarCensista" value="Modificar">
+            <br>
+            <p class="estilosMensajes" id="mensajesModificar"></p>
+        </center>
+    </div>
+
+    <br>
+    <div class="formsEstilosValidar" id="" hidden>
+        <center>
+            <h1>Verificar Datos Del Censo</h1>
+            <p id="mensajeDatosCenso"></p>
+            <input class="btnsForms" type="button" id="" value="Validar">
+            <br>
+        </center>
+    </div>
+    <br>
+    <div class="formsEstilosValidar" id="formBuscarCiValidacion" hidden>
+        <center>
+            <h1>Persona a validar</h1>
+            <br>
+            <input class="txtEstilos" type="text" id="ciBuscar" placeholder="Documento..."><br>
+            <input class="btnsForms" type="button" id="buscarCensoMenuCensista" value="Buscar">
+            <br>
+            <p class="estilosMensajes" id="mensajesFormBuscarCenso"></p>
+            <div id="btnsFormBuscarCiValidacion" hidden>
+                <input id="btnVerCenso" class="btnsForms" type="button" value="Ver censo">
+                <br>
+            </div>
+        </center>
+        <div id="verCensoCensista" hidden>
+            <center>
+                <label>Nombre: </label><label id="nombreCensado"></label>
+                <br>
+                <label>Apellido: </label><label id="apellidoCensado"></label>
+                <br>
+                <label>Edad: </label><label id="edadCensado"></label>
+                <br>
+                <label>Cedula: </label><label id="cedulaCensado"></label>
+                <br>
+                <label>Departamento: </label><label id="deptoCensado"></label>
+                <br>
+                <label>Ocupacion: </label><label id="ocupCensado"></label>
+                <br>
+
+                <input type="button" class="btnsForms" id="validarCenso" value="Validar">
+            </center>
+        </div>
+    </div>
+    <br>
+    <div class="formsEstilos" id="cambiarCensoCensista" hidden>
+        <center>
+            <h2>Cambiar censista a cargo de censo</h2>
+            <br>
+            <select class="txtEstilos" name="Censos pendientes por validar" id="selectCensosPendientes">
+            </select>
+            <br>
+            <h4>Seleccione un censo a re asignar</h4>
+            <br>
+            <label>Nombre: </label><label id="nombreCensado2"></label>
+            <br>
+            <label>Apellido: </label><label id="apellidoCensado2"></label>
+            <br>
+            <label>Edad: </label><label id="edadCensado2"></label>
+            <br>
+            <label>Cedula: </label><label id="cedulaCensado2"></label>
+            <br>
+            <label>Departamento: </label><label id="deptoCensado2"></label>
+            <br>
+            <label>Ocupacion: </label><label id="ocupCensado2"></label>
+            <br>
+            <input class="btnsForms" type="button" value="Seleccionar censo" id="seleccionarCenso">
+            <br>
+
+            <div id="divElegirCensista" hidden>
+                <h4>Seleccione el censista</h4>
+                <select class="txtEstilos" name="Censistas" id="selectCensistas">
+
+                </select>
+                <br>
+                <input class="btnsForms" type="button" value="Asignar" id="asignarNuevoCensista">
+                <br>
+                <p id="mensajesCambiarCensoCensista"></p>
+            </div>
+        </center>
+    </div>
+    <br>
+    <div id="verCensosPendientes" hidden>
+        <center>
+            <p id="mensajeCensosPendientes"></p>
+        </center>
+    </div>
+    <br>
+    <div id="contenedor-banner" style="display: block;">
+        <img src="img/BANNER.png" id="imgBanner">
+        <h2 id="encabezadoTabla">Estadísticas</h2>
+        <div id="listaEstadisticasCensos" style="display: block;">
+            <input type="button" class="btnsForms" id="verEstadisticas" value="Ver Estadísticas">
+            <p id="mensajeEstadisticasCenso"></p>
+        </div>
+    </div>
+    <br>
+</body>
+<footer>
+    <h3>PROGRAMACION 1</h3>
+    <h3>Universidad ORT</h3>
+    <br>
+    <h4>Emanuel Gomez - Lucas Padua</h4>
+</footer>
+
+</html>
