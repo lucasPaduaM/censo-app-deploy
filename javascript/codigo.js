@@ -173,7 +173,7 @@ function login() {
             mensaje = "Login exitoso";
             console.log(miSistema.usuarioLogueado);
             flag = true;
-            document.getElementById("nombreCensistaH1").innerHTML += miSistema.usuarioLogueado.nombreDeUsuario;
+            document.getElementById("nombreCensistaH1").innerHTML = "Censista: " + miSistema.usuarioLogueado.nombreDeUsuario;
         } else {
             mensaje = "El usuario no existe o la contraseña es incorrecta";
         }
